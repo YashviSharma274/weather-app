@@ -1,0 +1,362 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    background-image: url('bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+    background-position: 0 -470px;
+    overflow: hidden;
+}
+
+
+.starter{
+    position: absolute;
+    background-color: rgba(0, 0, 1, 0.456);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    text-align: center;
+    padding-top: 300px;
+    font-weight: bolder;
+}
+.starter-opacity{
+    opacity: 0;
+}
+.starter:before{
+    font-size: 60px;
+    content: "";
+    color: white;
+    animation: loadin 2s linear infinite;
+}
+@keyframes loadin{
+    0%{content: "L";}
+    10%{content: "LO";}
+    20%{content: "LOA";}
+    30%{content: "LOAD";}
+    40%{content: "LOADI";}
+    50%{content: "LOADIN";}
+    60%{content: "LOADING";}
+    70%{content: "LOADING.";}
+    80%{content: "LOADING..";}
+    90%{content: "LOADING...";}
+    100%{content: "LOADING....";}
+}
+
+
+
+
+
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.container-opacity{
+    opacity: 0;
+}
+
+.heading{
+    font-weight: 700;
+    font-style: normal;
+    font-size: 50px;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+    background: transparent;
+    vertical-align: middle;
+    background-image: linear-gradient(to top, rgb(74, 20, 141) 20%,rgb(28, 30, 67) 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+}
+
+.category{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20rem;
+    user-select: none;
+}
+
+
+.grant-location-section{
+    opacity: 1;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(50, 44, 50, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    gap: 1rem;
+}
+
+
+.grant-location-section button{
+    padding: 0.7rem 1rem;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+}
+.grant-location-section button:active{
+    padding: 0.7rem 1rem;
+    font-weight: bold;
+    background-color: rgba(0, 255, 0, 0.468);
+    color: white;
+}
+
+
+.error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.error-sent{
+    
+    font-size: 22px;
+    color: white;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.error-opacity{
+    display: none;
+}
+
+
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-opacity{
+    display: none;
+}
+
+input::placeholder{
+    user-select: none;
+}
+.your-weather{
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;  
+    backdrop-filter: blur(7px);
+    font-size: 16px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    transition: all 0.2s;
+    margin-top: -20px;
+}
+.your-weather:hover{
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(0px);
+}
+#search{
+    padding: 4px 30px;
+}
+
+.your-city-card{
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 0.6rem;
+    padding: 2rem;
+    border-radius: 10px;
+}
+.city{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+.city img{
+    border-radius: 4px;
+}
+.clouds{
+    font-weight: 100;
+    font-size: 23px;
+}
+
+.clouds-image{
+    object-fit: cover;
+    /* user-select: none; */
+    /* margin-top: -40px;
+    margin-bottom: -40px; */
+}
+
+.three-box{
+    display: flex;
+    gap: 2rem;
+}
+.boxes{
+    background-color: rgba(240, 9, 225, 0.1);
+    display: flex;
+    height: 130px;
+    width: 160px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.6rem 2.3rem;
+    border-radius: 10px;
+    gap: 0.5rem;
+}
+
+
+.input-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: -10px;
+}
+.search-bar{
+    width: 400px;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    border:none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(3, 3, 3, 0.368);
+    border-radius: 5px;
+    transition: all 0.7s;
+}
+.search-bar:focus{
+    backdrop-filter: blur(10px);
+}
+.search-bar::placeholder{
+    color: white;
+}
+.image-section{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(7px);
+    padding: 0.3rem 0.4rem;
+    border-radius: 100%;
+    text-align: center;
+    object-fit: cover;
+}
+.image-section{
+    padding-top: 7px;
+}
+
+
+.grant-location-section-opacity{
+    display: none;
+}
+
+.input-section-opacity{
+    display: none;
+}
+
+.your-city-card-opacity{
+    display: none;
+}
+
+
+@media (max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings:
+            "wdth" 100;
+        background-image: url('citybg.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: 0px;
+        overflow: auto;
+        background-size: 1200px;
+        background-color: black;
+    }
+    .heading{
+        font-size: 105px;
+        margin-top: 50px;
+        background-image: linear-gradient(180deg,red,rgb(72, 18, 34) 100%,red );
+    }
+    .container{
+        padding-top: 300px;
+        gap: 15rem;
+    }
+    .your-weather{
+        transform: scale(3.5);
+    }
+    .grant-location-section{
+        transform: scale(1.9);
+        margin-top: 200px;
+    }
+    .search-bar{
+        transform: scale(2.7);
+        margin-right: 100px;
+    }
+    .image-section{
+        transform: scale(2.7);
+        position: absolute;
+        left: 1130px;
+    }
+    .your-city-card{
+        margin-top: 40px;
+        transform: scale(1.9);
+        backdrop-filter: blur(5px);
+    }
+    .starter{
+        overflow: hidden;
+        height: 2400px;
+        width: 1200px;
+        padding-top: 1100px;
+    }
+   
+    
+}
